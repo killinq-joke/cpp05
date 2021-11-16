@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 05:23:30 by mout              #+#    #+#             */
-/*   Updated: 2021/11/16 06:53:27 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/16 11:29:58 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form::Form(target, 145)
 {
     std::cout << "Shrubbery Creation Form constructor" << std::endl;
+}
+
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & s1) : Form::Form(s1.getName(), s1.getGrade())
+{
+    std::cout << "Shrubbery Creation Form copy constructor" << std::endl;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm(void)

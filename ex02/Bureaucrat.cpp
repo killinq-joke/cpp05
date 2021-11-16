@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:25:51 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 06:54:35 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/16 12:00:56 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,30 @@ int			Bureaucrat::getGrade(void) const
 void		Bureaucrat::increment(void)
 {
 	if (this->getGrade() > 1)
-		this->_grade--;
+		this->setGrade(this->getGrade() - 1);
 }
 
 void		Bureaucrat::decrement(void)
 {
 	if (this->getGrade() < 150)
-		this->_grade++;
+		this->setGrade(this->getGrade() + 1);
+}
+
+void	Bureaucrat::setName(std::string name)
+{
+	this->_name = name;
+}
+
+void	Bureaucrat::setGrade(int grade)
+{
+	this->_grade = grade;
+}
+
+Bureaucrat Bureaucrat::operator=(Bureaucrat const & b1)
+{
+	this->setGrade(b1.getGrade());
+	this->setName(b1.getName());
+	return (*this);
 }
 
 void		Bureaucrat::signForm(Form & f1)

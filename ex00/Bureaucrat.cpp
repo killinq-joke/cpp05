@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:25:51 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/15 12:02:21 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 11:57:56 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,13 @@ Bureaucrat::Bureaucrat(Bureaucrat const & b1) : _name(b1.getName()), _grade(b1.g
 	std::cout << "Bureaucrat copy constructor" << std::endl;
 }
 
+Bureaucrat Bureaucrat::operator=(Bureaucrat const & b1)
+{
+	this->setGrade(b1.getGrade());
+	this->setName(b1.getName());
+	return (*this);
+}
+
 Bureaucrat::~Bureaucrat(void)
 {
 	std::cout << "Bureaucrat destructor" << std::endl;
@@ -54,6 +61,16 @@ std::string	Bureaucrat::getName(void) const
 int			Bureaucrat::getGrade(void) const
 {
 	return (this->_grade);
+}
+
+void	Bureaucrat::setName(std::string name)
+{
+	this->_name = name;
+}
+
+void	Bureaucrat::setGrade(int grade)
+{
+	this->_grade = grade;
 }
 
 void		Bureaucrat::increment(void)

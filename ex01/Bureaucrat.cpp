@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:25:51 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/15 15:20:58 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 11:57:49 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,13 @@ int			Bureaucrat::getGrade(void) const
 void		Bureaucrat::increment(void)
 {
 	if (this->getGrade() > 1)
-		this->_grade--;
+		this->setGrade(this->getGrade() - 1);
 }
 
 void		Bureaucrat::decrement(void)
 {
 	if (this->getGrade() < 150)
-		this->_grade++;
+		this->setGrade(this->getGrade() + 1);
 }
 
 void		Bureaucrat::signForm(Form & f1)
@@ -79,6 +79,23 @@ void		Bureaucrat::signForm(Form & f1)
 	{
 		std::cerr << *this << " cannot sign because his grade is too low" << std::endl;
 	}
+}
+
+void	Bureaucrat::setName(std::string name)
+{
+	this->_name = name;
+}
+
+void	Bureaucrat::setGrade(int grade)
+{
+	this->_grade = grade;
+}
+
+Bureaucrat Bureaucrat::operator=(Bureaucrat const & b1)
+{
+	this->setGrade(b1.getGrade());
+	this->setName(b1.getName());
+	return (*this);
 }
 
 std::ostream&	operator<<(std::ostream& o, Bureaucrat const & b1)

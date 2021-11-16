@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:29:37 by mout              #+#    #+#             */
-/*   Updated: 2021/11/16 06:32:17 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/16 11:27:46 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ class PresidentialPardonForm : public Form
 {
 public:
     PresidentialPardonForm(std::string target);
+    PresidentialPardonForm(PresidentialPardonForm const & p1);
     ~PresidentialPardonForm(void);
 
     void    execute(Bureaucrat const & executor) const;

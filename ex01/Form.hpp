@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:19:35 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/15 15:06:14 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 11:45:45 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ public:
 	bool		getSigned(void) const;
 	int			getGrade(void) const;
 	void		beSigned(Bureaucrat const & b1);
+	void		setName(std::string name);
+	void		setSigned(bool issigned);
+	void		setGrade(int grade);
 
 private:
 	const std::string _name;

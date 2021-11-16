@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:30:52 by mout              #+#    #+#             */
-/*   Updated: 2021/11/16 06:52:43 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/16 11:31:49 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form::Form(target, 25)
 {
     std::cout << "Presidential Pardon Form constructor" << std::endl;
+}
+
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & p1) : Form::Form(p1.getName(), p1.getGrade())
+{
+    std::cout << "Presidential Pardon Form copy constructor" << std::endl;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm(void)

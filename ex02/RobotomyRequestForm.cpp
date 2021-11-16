@@ -17,6 +17,11 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form::Form(target
     std::cout << "Robotomy Request Form constructor" << std::endl;
 }
 
+RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & r1) : Form::Form(r1.getName(), r1.getGrade())
+{
+    std::cout << "Robotomy Request Form copy constructor" << std::endl;
+}
+
 RobotomyRequestForm::~RobotomyRequestForm(void)
 {
     std::cout << "Robotomy Request Form destructor" << std::endl;
