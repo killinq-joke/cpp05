@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 16:25:13 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 06:12:49 by mout             ###   ########.fr       */
+/*   Created: 2021/11/16 05:51:05 by mout              #+#    #+#             */
+/*   Updated: 2021/11/16 05:54:13 by mout             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "ShrubberyCreationForm.hpp"
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
+# include "Form.hpp"
 
-int	main(void)
+class RobotomyRequestForm : public Form
 {
-	Bureaucrat m = Bureaucrat("mathias", 150);
-	Bureaucrat w = Bureaucrat("waniboy", 10);
-	Form f = Form("zak's form", 10);
-	RobotomyRequestForm z = RobotomyRequestForm("broman");
-	
-	std::cout << w << " | " << m << std::endl;
-	
-	m.signForm(f);
-	w.signForm(f);
-	z.execute(m);
-	return (0);
-}
+public:
+    RobotomyRequestForm(std::string target);
+    ~RobotomyRequestForm(void);
+
+    void    execute(Bureaucrat const & executor);
+};
+
+#endif
