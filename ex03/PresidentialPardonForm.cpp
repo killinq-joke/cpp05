@@ -6,18 +6,18 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:30:52 by mout              #+#    #+#             */
-/*   Updated: 2021/11/16 12:11:10 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 11:31:49 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form::Form("Presidential Pardon Form", 25, target)
+PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form::Form(target, 25)
 {
     std::cout << "Presidential Pardon Form constructor" << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & p1) : Form::Form(p1.getName(), p1.getGrade(), p1.getTarget())
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & p1) : Form::Form(p1.getName(), p1.getGrade())
 {
     std::cout << "Presidential Pardon Form copy constructor" << std::endl;
 }

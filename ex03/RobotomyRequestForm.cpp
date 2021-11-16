@@ -12,12 +12,12 @@
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form::Form("Robotomy Request Form", 72, target)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form::Form(target, 72)
 {
     std::cout << "Robotomy Request Form constructor" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & r1) : Form::Form(r1.getName(), r1.getGrade(), r1.getTarget())
+RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & r1) : Form::Form(r1.getName(), r1.getGrade())
 {
     std::cout << "Robotomy Request Form copy constructor" << std::endl;
 }

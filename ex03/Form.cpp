@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:19:37 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 12:08:06 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 06:26:03 by mout             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(std::string name, int grade, std::string target) : _name(name), _grade(grade), _signed(false), _target(target)
+Form::Form(std::string name, int grade) : _name(name), _grade(grade), _signed(false)
 {
 	if (grade <= 0)
 		throw Form::GradeTooHighException();
@@ -21,7 +21,7 @@ Form::Form(std::string name, int grade, std::string target) : _name(name), _grad
 	std::cout << "Form constructor" << std::endl;
 }
 
-Form::Form(Form const & f1) : _name(f1.getName()), _grade(f1.getGrade()), _signed(f1.getSigned()), _target(f1.getTarget())
+Form::Form(Form const & f1) : _name(f1.getName()), _grade(f1.getGrade()), _signed(f1.getSigned())
 {
 	try
 	{
@@ -59,11 +59,6 @@ bool		Form::getSigned(void) const
 int			Form::getGrade(void) const
 {
 	return (this->_grade);
-}
-
-std::string	Form::getTarget(void) const
-{
-	return (this->_target);
 }
 
 void		Form::beSigned(Bureaucrat const & b1)
