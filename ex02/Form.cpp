@@ -6,13 +6,22 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:19:37 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 12:08:06 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 12:19:52 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
 Form::Form(std::string name, int grade, std::string target) : _name(name), _grade(grade), _signed(false), _target(target)
+{
+	if (grade <= 0)
+		throw Form::GradeTooHighException();
+	else if (grade > 150)
+		throw Form::GradeTooLowException();
+	std::cout << "Form constructor" << std::endl;
+}
+
+Form::Form(std::string name, int grade) : _name(name), _grade(grade), _signed(false)
 {
 	if (grade <= 0)
 		throw Form::GradeTooHighException();

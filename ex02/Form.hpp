@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:19:35 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 12:07:13 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 12:14:24 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Bureaucrat;
 class Form
 {
 public:
+	Form(std::string name, int grade);
 	Form(std::string name, int grade, std::string target);
 	Form(Form const & f1);
 	virtual ~Form(void);

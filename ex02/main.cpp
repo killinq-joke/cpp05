@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:25:13 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 06:27:11 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/16 12:31:55 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main(void)
 	Bureaucrat w = Bureaucrat("waniboy", 10);
 	Form f = Form("zak's form", 10);
 	RobotomyRequestForm z = RobotomyRequestForm("broman");
+	ShrubberyCreationForm s = ShrubberyCreationForm("popo");
 	
 	std::cout << w << " | " << m << std::endl;
 	
@@ -29,5 +30,8 @@ int	main(void)
 	z.execute(w);
 	z.beSigned(w);
 	z.execute(w);
+	w.executeForm(s);
+	w.signForm(s);
+	w.executeForm(s);
 	return (0);
 }
