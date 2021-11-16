@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:25:51 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/15 15:20:58 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 06:48:24 by mout             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,11 @@ void		Bureaucrat::signForm(Form & f1)
 	{
 		std::cerr << *this << " cannot sign because his grade is too low" << std::endl;
 	}
+}
+
+void		Bureaucrat::executeForm(Form const & form)
+{
+	form.execute(*this);
 }
 
 std::ostream&	operator<<(std::ostream& o, Bureaucrat const & b1)

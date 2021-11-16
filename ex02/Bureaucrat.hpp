@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:25:49 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/15 14:46:37 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 06:47:52 by mout             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ public:
 	void		increment(void);
 	void		decrement(void);
 	void		signForm(Form & f1);
+	void		executeForm(Form const & form);
 
 private:
 	std::string _name;
