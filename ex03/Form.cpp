@@ -3,14 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:19:37 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 06:26:03 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/16 14:09:35 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+
+Form::Form(std::string name, int grade, std::string target) : _name(name), _grade(grade), _signed(false), _target(target)
+{
+	if (grade <= 0)
+		throw Form::GradeTooHighException();
+	else if (grade > 150)
+		throw Form::GradeTooLowException();
+	std::cout << "Form constructor" << std::endl;
+}
 
 Form::Form(std::string name, int grade) : _name(name), _grade(grade), _signed(false)
 {
@@ -21,7 +30,7 @@ Form::Form(std::string name, int grade) : _name(name), _grade(grade), _signed(fa
 	std::cout << "Form constructor" << std::endl;
 }
 
-Form::Form(Form const & f1) : _name(f1.getName()), _grade(f1.getGrade()), _signed(f1.getSigned())
+Form::Form(Form const & f1) : _name(f1.getName()), _grade(f1.getGrade()), _signed(f1.getSigned()), _target(f1.getTarget())
 {
 	try
 	{
@@ -61,6 +70,11 @@ int			Form::getGrade(void) const
 	return (this->_grade);
 }
 
+std::string	Form::getTarget(void) const
+{
+	return (this->_target);
+}
+
 void		Form::beSigned(Bureaucrat const & b1)
 {
 	try
@@ -82,6 +96,12 @@ void		Form::beSigned(Bureaucrat const & b1)
 void	Form::execute(Bureaucrat const & executor) const
 {
 	(void)executor;
+}
+
+Form	*quasiduplicate(std::string target)
+{
+	(void)target;
+	return (nullptr);
 }
 
 std::ostream & operator<<(std::ostream & o, Form const & f1)

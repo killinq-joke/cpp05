@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:29:37 by mout              #+#    #+#             */
-/*   Updated: 2021/11/16 11:27:46 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 14:09:45 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ public:
     ~PresidentialPardonForm(void);
 
     void    execute(Bureaucrat const & executor) const;
+	Form	*quasiduplicate(std::string target);
 };
 
 

@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 05:51:05 by mout              #+#    #+#             */
-/*   Updated: 2021/11/16 11:28:07 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 14:12:26 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ public:
     ~RobotomyRequestForm(void);
 
     void    execute(Bureaucrat const & executor) const;
+	Form	*quasiduplicate(std::string target);
 };
 
 #endif

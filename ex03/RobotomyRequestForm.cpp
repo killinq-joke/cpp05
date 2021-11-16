@@ -12,12 +12,12 @@
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form::Form(target, 72)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form::Form("Robotomy Request Form", 72, target)
 {
     std::cout << "Robotomy Request Form constructor" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & r1) : Form::Form(r1.getName(), r1.getGrade())
+RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & r1) : Form::Form(r1.getName(), r1.getGrade(), r1.getTarget())
 {
     std::cout << "Robotomy Request Form copy constructor" << std::endl;
 }
@@ -25,6 +25,11 @@ RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & r1) : Form:
 RobotomyRequestForm::~RobotomyRequestForm(void)
 {
     std::cout << "Robotomy Request Form destructor" << std::endl;
+}
+
+Form	*RobotomyRequestForm::quasiduplicate(std::string target)
+{
+	return (new RobotomyRequestForm(target));
 }
 
 void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
@@ -45,14 +50,15 @@ void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
         else
             std::cout << "Failure trying to robotize " << this->getName() << std::endl;
     }
-    catch (Form::GradeTooLowException&)
+    catch (Form::GradeTooLowException)
     {
-        throw Form::GradeTooLowException();
+        // throw Form::GradeTooLowException();
+		//TODO add exception to Bureaucrat::executeForm
         std::cerr << "Robotomy Request Form: Grade Too Low" << std::endl;
     }
-    catch (Form::NotSignedExecution&)
+    catch (Form::NotSignedExecution)
     {
-        throw Form::NotSignedExecution();
+        // throw Form::NotSignedExecution();
         std::cerr << "Robotomy Request Form: Not Signed Execution" << std::endl;
     }
 }
