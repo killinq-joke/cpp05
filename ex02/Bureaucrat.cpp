@@ -6,7 +6,7 @@
 /*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:25:51 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 06:48:24 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/16 06:54:35 by mout             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,19 @@ void		Bureaucrat::signForm(Form & f1)
 
 void		Bureaucrat::executeForm(Form const & form)
 {
-	form.execute(*this);
+	try
+	{
+		form.execute(*this);
+		std::cout << *this << " executes " << form << std::endl;
+	}
+	catch (Form::GradeTooLowException &)
+	{
+		std::cerr << *this << " cannot execute because of: Grade Too Low" << std::endl;
+	}
+	catch (Form::NotSignedExecution &)
+	{
+		std::cerr << *this << " cannot execute because of: Not Signed" << std::endl;
+	}
 }
 
 std::ostream&	operator<<(std::ostream& o, Bureaucrat const & b1)
