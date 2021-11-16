@@ -6,7 +6,7 @@
 /*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:25:13 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 06:12:49 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/16 06:27:11 by mout             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,8 @@ int	main(void)
 	m.signForm(f);
 	w.signForm(f);
 	z.execute(m);
+	z.execute(w);
+	z.beSigned(w);
+	z.execute(w);
 	return (0);
 }

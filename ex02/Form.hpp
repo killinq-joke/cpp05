@@ -6,7 +6,7 @@
 /*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:19:35 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 05:43:50 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/16 06:24:40 by mout             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Form
 public:
 	Form(std::string name, int grade);
 	Form(Form const & f1);
-	~Form(void);
+	virtual ~Form(void);
 
 	class GradeTooHighException : public std::exception {};
 	class GradeTooLowException : public std::exception {};

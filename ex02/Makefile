@@ -6,13 +6,13 @@
 #    By: mout <mout@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/14 16:08:02 by ztouzri           #+#    #+#              #
-#    Updated: 2021/11/16 06:13:08 by mout             ###   ########.fr        #
+#    Updated: 2021/11/16 06:16:13 by mout             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		= clang++
 CFLAGS	= -Wall -Wextra -Werror
-SRCS	= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.hpp
+SRCS	= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp
 OBJS	= $(SRCS:cpp=o)
 NAME	= exec
 

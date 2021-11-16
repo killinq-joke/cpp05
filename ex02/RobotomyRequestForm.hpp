@@ -6,7 +6,7 @@
 /*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 05:51:05 by mout              #+#    #+#             */
-/*   Updated: 2021/11/16 05:54:13 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/16 06:16:39 by mout             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ public:
     RobotomyRequestForm(std::string target);
     ~RobotomyRequestForm(void);
 
-    void    execute(Bureaucrat const & executor);
+    void    execute(Bureaucrat const & executor) const;
 };
 
 #endif

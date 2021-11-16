@@ -6,7 +6,7 @@
 /*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 05:23:30 by mout              #+#    #+#             */
-/*   Updated: 2021/11/16 05:44:05 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/16 06:14:29 by mout             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
         {
             throw Form::NotSignedExecution();
         }
-        file.open(this->getName() + "_shrubbery", ios::out);
+        file.open(this->getName() + "_shrubbery", std::ios::out);
         file << "   w     w" << std::endl << "  www   www" << std::endl << " wwwww wwwww" << std::endl << "   w     w" << std::endl;
         file.close();
     }

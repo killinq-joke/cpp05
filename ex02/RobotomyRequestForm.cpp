@@ -22,7 +22,7 @@ RobotomyRequestForm::~RobotomyRequestForm(void)
     std::cout << "Robotomy Request Form destructor" << std::endl;
 }
 
-void    RobotomyRequestForm::execute(Bureaucrat const & executor)
+void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
     try
     {

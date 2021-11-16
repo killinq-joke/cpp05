@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:19:37 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/15 15:25:13 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 06:26:03 by mout             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Form::Form(std::string name, int grade) : _name(name), _grade(grade), _signed(fa
 	std::cout << "Form constructor" << std::endl;
 }
 
-Form::Form(Form const & f1) : _name(f1.getName()), _grade(f1.getGrade()), _signed(f1._signed)
+Form::Form(Form const & f1) : _name(f1.getName()), _grade(f1.getGrade()), _signed(f1.getSigned())
 {
 	try
 	{
@@ -77,6 +77,11 @@ void		Form::beSigned(Bureaucrat const & b1)
 		std::cerr << "Form Grade Too Low Exception" << std::endl;
 	}
 	
+}
+
+void	Form::execute(Bureaucrat const & executor) const
+{
+	(void)executor;
 }
 
 std::ostream & operator<<(std::ostream & o, Form const & f1)
