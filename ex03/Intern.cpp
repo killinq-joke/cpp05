@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 12:05:00 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/18 13:40:21 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/18 13:41:57 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Intern::Intern(void)
 	std::cout << "Intern constructor" << std::endl;
 }
 
-Intern::Intern(Intern & const i1)
+Intern::Intern(Intern const & i1)
 {
 	this->formtab = new Form*[3];
 	this->formtab[0] = i1.formtab[0]->quasiduplicate(i1.formtab[0]->getTarget());

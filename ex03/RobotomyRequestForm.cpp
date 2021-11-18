@@ -46,9 +46,9 @@ void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
         }
         srand(time(0));
         if (rand() % 2)
-            std::cout << this->getName() << " has been robotized" << std::endl;
+            std::cout << this->getTarget() << " has been robotized" << std::endl;
         else
-            std::cout << "Failure trying to robotize " << this->getName() << std::endl;
+            std::cout << "Failure trying to robotize " << this->getTarget() << std::endl;
     }
     catch (Form::GradeTooLowException)
     {

@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:30:52 by mout              #+#    #+#             */
-/*   Updated: 2021/11/16 12:31:08 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/18 13:45:27 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void    PresidentialPardonForm::execute(Bureaucrat const & executor) const
         {
             throw Form::NotSignedExecution();
         }
-        std::cout << this->getName() << " has been forgiven by Zafod Beeblebrox" << std::endl;
+        std::cout << this->getTarget() << " has been forgiven by Zafod Beeblebrox" << std::endl;
     }
     catch (Form::GradeTooLowException&)
     {

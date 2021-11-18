@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:25:13 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/18 09:35:14 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/18 13:43:48 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,12 @@ int	main(void)
 	Form f = Form("zak's form", 10);
 	RobotomyRequestForm z = RobotomyRequestForm("broman");
 	Intern noname = Intern();
+
+	Form* rrf;
+	rrf = noname.makeForm("Robotomy Request Form", "Bender");
 	
 	std::cout << w << " | " << m << std::endl;
+	std::cout << rrf << std::endl;
 	
 	m.signForm(f);
 	w.signForm(f);
@@ -31,5 +35,6 @@ int	main(void)
 	z.execute(w);
 	z.beSigned(w);
 	z.execute(w);
+	delete rrf;
 	return (0);
 }

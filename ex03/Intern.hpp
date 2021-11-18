@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 12:03:08 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/18 13:38:23 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/18 13:41:47 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Intern
 {
 public:
 	Intern(void);
-	Intern(Intern & const i1);
+	Intern(Intern const & i1);
 	~Intern(void);
 	
 	Form* makeForm(std::string name, std::string target);
