@@ -47,13 +47,10 @@ void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
     }
     catch (Form::GradeTooLowException)
     {
-        // throw Form::GradeTooLowException();
-		//TODO add exception to Bureaucrat::executeForm
         std::cerr << "Robotomy Request Form: Grade Too Low" << std::endl;
     }
     catch (Form::NotSignedExecution)
     {
-        // throw Form::NotSignedExecution();
         std::cerr << "Robotomy Request Form: Not Signed Execution" << std::endl;
     }
 }

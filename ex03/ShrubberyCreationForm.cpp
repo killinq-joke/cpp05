@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 05:23:30 by mout              #+#    #+#             */
-/*   Updated: 2021/11/16 14:13:07 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/18 13:58:09 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,10 @@ void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     }
     catch (Form::GradeTooLowException&)
     {
-        // throw Form::GradeTooLowException();
         std::cerr << "Cannot execute Shrubbery: Grade Too Low" << std::endl;
     }
     catch (Form::NotSignedExecution&)
     {
-        // throw Form::NotSignedExecution();
         std::cerr << "Cannot execute Shrubbery: Unsigned Form" << std::endl;
     }
 }

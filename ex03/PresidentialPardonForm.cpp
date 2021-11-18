@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:30:52 by mout              #+#    #+#             */
-/*   Updated: 2021/11/18 13:45:37 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/18 13:58:03 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,10 @@ void    PresidentialPardonForm::execute(Bureaucrat const & executor) const
     }
     catch (Form::GradeTooLowException&)
     {
-        // throw (Form::GradeTooLowException());
         std::cerr << "Presidential Pardon Form: Grade Too Low" << std::endl;
     }
     catch (Form::NotSignedExecution&)
     {
-        // throw (Form::NotSignedExecution());
         std::cerr << "Presidential Pardon Form: Nor Signed Execution" << std::endl;
     }
     
