@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:30:52 by mout              #+#    #+#             */
-/*   Updated: 2021/11/18 13:57:47 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/18 14:06:12 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void    PresidentialPardonForm::execute(Bureaucrat const & executor) const
     }
     catch (Form::NotSignedExecution&)
     {
-        std::cerr << "Presidential Pardon Form: Nor Signed Execution" << std::endl;
+        std::cerr << "Presidential Pardon Form: Not Signed Execution" << std::endl;
     }
     
 }

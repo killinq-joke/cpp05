@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:25:51 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 12:00:56 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/18 14:07:13 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,8 +102,8 @@ void		Bureaucrat::executeForm(Form const & form)
 {
 	try
 	{
-		form.execute(*this);
 		std::cout << *this << " executes " << form << std::endl;
+		form.execute(*this);
 	}
 	catch (Form::GradeTooLowException &)
 	{
