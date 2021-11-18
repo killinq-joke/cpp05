@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 12:05:00 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/18 13:41:57 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/18 15:12:53 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,10 @@ Form	*Intern::makeForm(std::string name, std::string target)
 	for (int i = 0; i < 3; i++)
 	{
 		if (formtab[i]->getName() == name)
+		{
+			std::cout << "Intern creates " << *formtab[i] << std::endl;
 			return (formtab[i]->quasiduplicate(target));
+		}
 	}
 	std::cerr << "'I don't have any form with this name'" << std::endl;
 	return (nullptr);
