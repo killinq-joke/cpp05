@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:25:13 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 15:06:10 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/18 09:35:14 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(void)
 	Bureaucrat w = Bureaucrat("waniboy", 10);
 	Form f = Form("zak's form", 10);
 	RobotomyRequestForm z = RobotomyRequestForm("broman");
-	Inter
+	Intern noname = Intern();
 	
 	std::cout << w << " | " << m << std::endl;
 	
