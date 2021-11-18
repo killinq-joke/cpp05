@@ -6,13 +6,14 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:25:13 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 12:50:48 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 15:06:10 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int	main(void)
 {
@@ -20,6 +21,7 @@ int	main(void)
 	Bureaucrat w = Bureaucrat("waniboy", 10);
 	Form f = Form("zak's form", 10);
 	RobotomyRequestForm z = RobotomyRequestForm("broman");
+	Inter
 	
 	std::cout << w << " | " << m << std::endl;
 	

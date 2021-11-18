@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:19:37 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 14:09:35 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 14:41:24 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void	Form::execute(Bureaucrat const & executor) const
 	(void)executor;
 }
 
-Form	*quasiduplicate(std::string target)
+Form	*Form::quasiduplicate(std::string target)
 {
 	(void)target;
 	return (nullptr);

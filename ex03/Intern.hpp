@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 12:03:08 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/16 14:02:36 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/16 14:25:15 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	~Intern(void);
 	
 	Form* makeForm(std::string name, std::string target);
-	Form* formtab[3];
+	Form** formtab;
 };
 
 #endif
